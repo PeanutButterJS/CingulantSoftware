@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'BebasNeueRegular';
+  src: url('../fonts/BebasNeueRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Burnstowndam';
+  src: url('../fonts/burnstowndam.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('../fonts/Ubuntu-R.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Champagne';
+  src: url('../fonts/Champagne.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/OpenSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SourceSansPro';
+  src: url('../fonts/SourceSansPro-Black.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-family: 'OpenSans';
+}
