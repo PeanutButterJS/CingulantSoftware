@@ -5,20 +5,8 @@
   font-style: normal;
 }
 @font-face {
-  font-family: 'Burnstowndam';
-  src: url('../fonts/burnstowndam.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
   font-family: 'Ubuntu';
   src: url('../fonts/Ubuntu-R.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Champagne';
-  src: url('../fonts/Champagne.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }

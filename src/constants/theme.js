@@ -1,15 +1,11 @@
-import { lighten } from 'polished';
-
 export const theme = {
-  brown: '#b99379',
-  blue: '#02313b',
+  blue: '#02a9f7',
+  lightBlue: '#89d6fb',
+  veryLightBlue: '#d4f0fc',
+  darkBlue: '#02577a',
+  VeryDarkBlue: '#01303f',
   white: 'white',
-  darkBlue: '#021c22',
-  quoteBlue: '#81bedb',
-  grey: 'grey',
-  lightBlue: lighten(0.05, '#02313b'),
-  mediumBlue: lighten(0.01, '#02313b'),
-  lightBrown: lighten(0.05, '#b99379')
+  grey: 'grey'
 };
 
 export default theme;

@@ -10,11 +10,11 @@ import BottomContent from './components/bottom-content';
 import Testimonials from './components/testimonials';
 import Gallery from './components/gallery';
 import TransparentContent from './components/transparent-content';
-import Intro from './components/intro';
+// import Intro from './components/intro';
 
 const App = () => (
   <PageWrapper>
-    <Intro />
+    {/*  <Intro /> */}
     <Header />
     <PageContent>
       <Hero />

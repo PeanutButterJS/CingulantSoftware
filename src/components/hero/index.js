@@ -1,6 +1,6 @@
 import Styled from 'styled-components';
 import PropTypes from 'prop-types';
-import img from '../../assets/images/hero-image.png';
+import img from '../../assets/images/hero.jpg';
 
 export const Hero = ({ className }) => (
   <div className={className}>
