@@ -18,7 +18,6 @@ export default styled(Footer)`
   background: ${props => props.theme.blue};
   color: ${props => props.theme.white};
   padding: 80px 90px 0;
-  position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
