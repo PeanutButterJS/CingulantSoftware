@@ -1,5 +1,5 @@
-export const theme2 = {
-  blue: '#02a9f7',
+export const theme = {
+  blue: '#2e9cca', // '#02a9f7'
   lightBlue: '#89d6fb',
   veryLightBlue: '#d4f0fc',
   darkBlue: '#02577a',
@@ -8,7 +8,7 @@ export const theme2 = {
   grey: 'grey'
 };
 
-export const theme = {
+export const theme2 = {
   blue: '#296484',
   lightBlue: '#2e9cca',
   veryLightBlue: '#aaabb8',

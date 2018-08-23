@@ -1,6 +1,7 @@
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Hero from './components/hero';
+import MainContent from './components/main-content';
 // import PageContent from './components/page-content';
 //  import Footer from './components/footer';
 import PageWrapper from './components/page-wrapper';
@@ -16,6 +17,8 @@ const App = () => (
   <PageWrapper>
     {/* <Header /> */}
     <Hero />
+    <MainContent />
+
     {/*      <Descriptions />
     <TransparentContent />
     <Gallery />

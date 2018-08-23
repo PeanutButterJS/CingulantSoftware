@@ -12,7 +12,7 @@ export const PageWrapper = styled.div`
   background-size: auto, cover;
   background-attachment: fixed, fixed;
   background-position: center, center;
-  height: 100vh;
+  height: 100%;
 `;
 
 export default PageWrapper;
