@@ -6,8 +6,8 @@ export const PageWrapper = styled.div`
   background-color: #2e3141;
   background-image: linear-gradient(
       to top,
-      rgba(46, 49, 65, 0.8),
-      rgba(46, 49, 65, 0.8)
+      rgba(46, 49, 65, 0.3),
+      rgba(46, 49, 65, 0.4)
     ),
     url(${image});
   background-size: auto, cover;
