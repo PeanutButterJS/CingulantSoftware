@@ -87,7 +87,8 @@ export default Styled(Hero)`
     font-size: 1em;
     letter-spacing: 0.1em;
     line-height: 2;
-    text-transform: uppercase;   
+    text-transform: uppercase; 
+    font-family: 'OpenSansLight'; 
 
     @media screen and (max-width: 736px){
     font-size: 0.8em;

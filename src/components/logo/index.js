@@ -15,7 +15,7 @@ Logo.propTypes = {
 export default Styled(Logo)`
   .c {
     font-family: 'SegoeScript';
-    font-size: 4.4rem;
+    font-size: 3.5rem;
     color: ${props => props.theme.lightBlue}; // blue
     transition: all 0.5s ease;
 
@@ -28,7 +28,7 @@ export default Styled(Logo)`
   .rest {
     font-family: 'OpenSans';
     margin-left: -20px;
-    font-size: 1.5rem;
+    font-size: 1rem;
     position: relative;
     top: -10px;
     letter-spacing: 0.4rem;
