@@ -26,6 +26,7 @@ export default Styled(Logo)`
   }
 
   .rest {
+    font-family: 'OpenSans';
     margin-left: -20px;
     font-size: 1.5rem;
     position: relative;
