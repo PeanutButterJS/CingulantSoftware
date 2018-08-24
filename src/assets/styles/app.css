@@ -26,6 +26,7 @@
 html {
   font-family: 'OpenSans';
   font-size: 16.5pt;
+  height: 100%;
 }
 @media screen and (max-width: 1680px) {
   html {
@@ -36,4 +37,12 @@ html {
   html {
     font-size: 12pt;
   }
+}
+
+body {
+  height: 100%;
+}
+
+#index {
+  height: 100%;
 }
