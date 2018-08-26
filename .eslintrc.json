@@ -1,6 +1,5 @@
 {
-  "extends": ["airbnb", "prettier/react"],
-  "plugins": ["prettier"],
+  "extends": ["airbnb"],
   "env": {
     "browser": true
   },
@@ -38,7 +37,6 @@
     "linebreak-style": 0,
     "comma-dangle": 0,
     "react/require-default-props": 0,
-    "react/react-in-jsx-scope": 1,
-    "prettier/prettier": ["error"]
+    "react/react-in-jsx-scope": 1
   }
 }

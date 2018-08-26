@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 
 const Inner = styled.div`
@@ -81,7 +81,7 @@ const Text = styled.p`
 `;
 
 const StyledSlantedContent = styled.section`
-  background-color: ${props => props.theme.darkBlue};
+  background-color: ${props => props.color};
   margin: 6.5em 0;
   position: relative;
   @media screen and (max-width: 980px) {
@@ -93,8 +93,8 @@ const StyledSlantedContent = styled.section`
 
   &:before,
   &:after {
-    box-shadow: inset 0 -1px 0 0 ${props => props.theme.darkBlue},
-      0 1px 0 0 ${props => props.theme.darkBlue};
+    box-shadow: inset 0 -1px 0 0 ${props => props.color},
+      0 1px 0 0 ${props => props.color};
     left: 0;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -103,7 +103,21 @@ const StyledSlantedContent = styled.section`
     height: 6.5em;
     position: absolute;
     width: 100%;
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%2302577a%3B' /%3E%3C/svg%3E");
+    ${props =>
+    props.color === props.theme.darkBlue &&
+      css`
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%2302577a%3B' /%3E%3C/svg%3E");
+      `};
+    ${props =>
+    props.color === props.theme.veryDarkBlue &&
+      css`
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%2301303f%3B' /%3E%3C/svg%3E");
+      `};
+      ${props =>
+    props.color === props.theme.blue &&
+      css`
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%232e9cca%3B' /%3E%3C/svg%3E");
+      `};
     @media screen and (max-width: 980px) {
       height: 4.75em;
     }
@@ -114,6 +128,7 @@ const StyledSlantedContent = styled.section`
 
   &:before {
     top: -6.5em;
+    transform: ${props => (!props.odd ? 'scaleX(-1)' : '')};
     @media screen and (max-width: 980px) {
       top: -4.75em;
     }
@@ -121,9 +136,8 @@ const StyledSlantedContent = styled.section`
       top: -2.5em;
     }
   }
-
   &:after {
-    transform: scaleY(-1);
+    transform: ${p => (p.odd ? 'scaleY(-1)' : 'scaleY(-1) scaleX(-1)')};
     bottom: -6.5em;
     @media screen and (max-width: 980px) {
       bottom: -4.75em;
@@ -136,8 +150,8 @@ const StyledSlantedContent = styled.section`
   }
 `;
 
-export const SlantedContent = ({ odd, image, title, children }) => (
-  <StyledSlantedContent>
+export const SlantedContent = ({ odd, image, title, children, color }) => (
+  <StyledSlantedContent odd={odd} color={color}>
     <Inner odd={odd}>
       <ImageWrapper odd={odd}>
         <Image src={image} alt="" />
@@ -152,6 +166,7 @@ export const SlantedContent = ({ odd, image, title, children }) => (
 
 SlantedContent.propTypes = {
   odd: PropTypes.bool,
+  color: PropTypes.string,
   image: PropTypes.string,
   title: PropTypes.string,
   children: PropTypes.node
