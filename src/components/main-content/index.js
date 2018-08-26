@@ -1,18 +1,8 @@
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
-import Wrapper from './wrapper';
+import SlantedContent from './wrapper';
+import image2 from '../../assets/images/image2.jpg';
 
-export const MainContent = ({ className }) => (
-  <section className={className}>
-    <Wrapper />
-  </section>
-);
-
-MainContent.propTypes = {
-  className: PropTypes.string
-};
-
-export default styled(MainContent)`
+const StyledContent = styled.section`
   margin: 0;
   padding: 0;
   border: 0;
@@ -20,3 +10,16 @@ export default styled(MainContent)`
   font: inherit;
   vertical-align: baseline;
 `;
+
+export const MainContent = () => (
+  <StyledContent>
+    <SlantedContent odd image={image2} title="Magna arcu feugiat">
+      Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante,
+      nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus
+      arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et
+      faucibus viverra, ex nulla cursus.
+    </SlantedContent>
+  </StyledContent>
+);
+
+export default styled(MainContent)``;
