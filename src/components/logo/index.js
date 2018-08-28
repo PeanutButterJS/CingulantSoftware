@@ -34,6 +34,7 @@ export default Styled(Logo)`
     letter-spacing: 0.4rem;
     text-transform: uppercase;
     transition: all 0.5s ease;
+    color: ${props => props.theme.white};
 
     @media (max-width: 736px) {
       margin-left: -11px;

@@ -5,7 +5,7 @@ import MainContent from './components/main-content';
 // import PageContent from './components/page-content';
 //  import Footer from './components/footer';
 import PageWrapper from './components/page-wrapper';
-// import Header from './components/header';
+import Header from './components/header';
 /* import Descriptions from './components/descriptions';
 import BottomContent from './components/bottom-content';
 import Testimonials from './components/testimonials';
@@ -15,7 +15,7 @@ import TransparentContent from './components/transparent-content'; */
 
 const App = () => (
   <PageWrapper>
-    {/* <Header /> */}
+    <Header />
     <Hero />
     <MainContent />
 
