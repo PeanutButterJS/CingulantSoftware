@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import SlantedContent from './slanted-content';
 import image2 from '../../assets/images/image2.jpg';
 import image3 from '../../assets/images/image3.jpg';
 import image4 from '../../assets/images/image4.jpg';
 import theme from '../../constants/theme';
-import Points from './points';
+import Features from './features';
+import ImageContent from './image-content';
 
 const StyledContent = styled.section`
   margin: 0;
@@ -17,7 +17,7 @@ const StyledContent = styled.section`
 
 export const MainContent = () => (
   <StyledContent id="content">
-    <SlantedContent
+    <ImageContent
       odd
       image={image2}
       title="Magna arcu feugiat"
@@ -27,8 +27,8 @@ export const MainContent = () => (
       nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus
       arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et
       faucibus viverra, ex nulla cursus.
-    </SlantedContent>
-    <SlantedContent
+    </ImageContent>
+    <ImageContent
       image={image3}
       title="Magna arcu feugiat"
       color={theme.mediumBlue}
@@ -37,8 +37,8 @@ export const MainContent = () => (
       nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus
       arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et
       faucibus viverra, ex nulla cursus.
-    </SlantedContent>
-    <SlantedContent
+    </ImageContent>
+    <ImageContent
       odd
       image={image4}
       title="Magna arcu feugiat"
@@ -48,8 +48,8 @@ export const MainContent = () => (
       nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus
       arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et
       faucibus viverra, ex nulla cursus.
-    </SlantedContent>
-    <Points />
+    </ImageContent>
+    <Features />
   </StyledContent>
 );
 
