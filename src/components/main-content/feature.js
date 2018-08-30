@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 import Icon from '../common/icon';
+import Text from '../common/text';
 
 const StyledFeature = styled.li`
   padding: 4em 4em 2em 6em;
@@ -62,16 +63,55 @@ const StyledFeature = styled.li`
   }
 `;
 
-export const Feature = ({ child, icon }) => (
+const FetaureIcon = styled(Icon)`
+  :before {
+    font-size: 1.5em;
+    display: block;
+    color: ${props => props.theme.blueGreen};
+    position: absolute;
+    left: 1.75em;
+    top: 2.75em;
+    @media screen and (max-width: 980px) {
+      left: 0;
+      margin: 0 0 1em 0;
+      position: relative;
+      top: 0;
+    }
+  }
+`;
+
+const Title = styled.h3`
+  color: ${props => props.theme.white};
+  font-size: 1.15em;
+  line-height: 1.75em;
+  font-weight: 800;
+  letter-spacing: 0.225em;
+  margin: 0 0 1em 0;
+  text-transform: uppercase;
+  @media screen and (max-width: 736px) {
+    font-size: 1em;
+    line-height: 1.65em;
+  }
+`;
+
+const StyledText = styled(Text)`
+  color: ${props => props.theme.veryLightBlue};
+  font-family: 'OpenSans';
+`;
+
+export const Feature = ({ child, icon, children, title }) => (
   <StyledFeature child={child}>
-    <Icon icon={icon} />
-    hey hey
+    <FetaureIcon icon={icon} />
+    <Title>{title}</Title>
+    <StyledText>{children}</StyledText>
   </StyledFeature>
 );
 
 Feature.propTypes = {
   child: PropTypes.number,
-  icon: PropTypes.string
+  icon: PropTypes.string,
+  children: PropTypes.node,
+  title: PropTypes.string
 };
 
 export default Feature;

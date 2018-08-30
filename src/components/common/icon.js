@@ -5,12 +5,6 @@ import styled from 'styled-components';
 const StyledIcon = styled.i`
   :before {
     content: ${props => props.icon};
-    font-size: 1.5em;
-    display: block;
-    color: #00ffcc;
-    position: absolute;
-    left: 1.75em;
-    top: 2.75em;
   }
 `;
 

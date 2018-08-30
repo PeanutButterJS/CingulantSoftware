@@ -56,12 +56,60 @@ export const Features = () => (
         neque et faucibus viverra, ex nulla cursus.
       </Text>
       <FeaturesWrapper>
-        <Feature child={1} name="database" icon={icons.database} />
-        <Feature child={2} name="users" icon={icons.users} />
-        <Feature child={3} name="mug" icon={icons.mug} />
-        <Feature child={4} name="earth" icon={icons.earth} />
-        <Feature child={5} name="rocket" icon={icons.rocket} />
-        <Feature child={6} name="trophy" icon={icons.trophy} />
+        <Feature
+          child={1}
+          name="database"
+          icon={icons.database}
+          title="This is the title"
+        >
+          Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem
+          tincidunt nullam amet leo Aenean ligula consequat consequat.
+        </Feature>
+        <Feature
+          child={2}
+          name="users"
+          icon={icons.users}
+          title="This is the title"
+        >
+          Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem
+          tincidunt nullam amet leo Aenean ligula consequat consequat.
+        </Feature>
+        <Feature
+          child={3}
+          name="mug"
+          icon={icons.mug}
+          title="This is the title"
+        >
+          Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem
+          tincidunt nullam amet leo Aenean ligula consequat consequat.
+        </Feature>
+        <Feature
+          child={4}
+          name="earth"
+          icon={icons.earth}
+          title="This is the title"
+        >
+          Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem
+          tincidunt nullam amet leo Aenean ligula consequat consequat.
+        </Feature>
+        <Feature
+          child={5}
+          name="rocket"
+          icon={icons.rocket}
+          title="This is the title"
+        >
+          Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem
+          tincidunt nullam amet leo Aenean ligula consequat consequat.
+        </Feature>
+        <Feature
+          child={6}
+          name="trophy"
+          icon={icons.trophy}
+          title="This is the title"
+        >
+          Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem
+          tincidunt nullam amet leo Aenean ligula consequat consequat.
+        </Feature>
       </FeaturesWrapper>
     </Inner>
   </SlantedContent>
