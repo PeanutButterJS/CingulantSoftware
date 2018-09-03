@@ -12,14 +12,19 @@ const Inner = Styled.div`
 
 const LogoWrapper = Styled.div`
  transition: opacity 2s ease, transform 1s ease;
-    transform: translateY(0);
-    opacity: 1; 
-    margin: 0 0 1.3em 0;
-    transition: all 0.5s ease;
+  transform: translateY(0);
+  opacity: 1; 
+  margin: 0 0 1.3em 0;
 
-    @media screen and (max-width: 736px) {
-      margin: 0 0 1em 0;
-    }
+  @media screen and (max-width: 736px) {
+    margin: 0 0 1em 0;
+  }
+
+  &.preload {
+    transform: translateY(0.5em);
+    opacity: 0;
+  }
+
 `;
 
 const TitleMainText = Styled.h2`
@@ -38,6 +43,12 @@ const TitleMainText = Styled.h2`
     @media screen and (max-width: 736px) {
       font-size: 1.5em;
     }
+
+  &.preload {
+    opacity: 0;
+    transform: translateX(0.25em);
+    filter: blur(2px);
+  }
 `;
 
 const TitleSecondText = Styled.p`
@@ -55,6 +66,12 @@ transition: opacity 0.5s ease, transform 0.5s ease, filter 0.25s ease;
     @media screen and (max-width: 736px){
     font-size: 0.8em;
     }
+
+  &.preload {
+    opacity: 0;
+    transform: translateX(0.5em);
+    filter: blur(2px);
+  }
 `;
 
 const StyledHero = Styled.div`
@@ -77,18 +94,32 @@ const StyledHero = Styled.div`
   }
 `;
 
-export const Hero = () => (
-  <StyledHero>
-    <Inner>
-      <LogoWrapper>
-        <Logo />
-        <TitleMainText>Cingulant Software</TitleMainText>
-        <TitleSecondText>
-          Outsource the right way - the Cingulant way!
-        </TitleSecondText>
-      </LogoWrapper>
-    </Inner>
-  </StyledHero>
-);
+export class Hero extends React.Component {
+  constructor(props) {
+    super(props);
+    setTimeout(() => {
+      Array.from(document.getElementsByClassName('preload')).forEach(el => {
+        el.classList.remove('preload');
+      });
+    }, 100);
+  }
+  render() {
+    return (
+      <StyledHero>
+        <Inner>
+          <LogoWrapper className="preload">
+            <Logo />
+            <TitleMainText className="preload">
+              Cingulant Software
+            </TitleMainText>
+            <TitleSecondText className="preload">
+              Outsource the right way - the Cingulant way!
+            </TitleSecondText>
+          </LogoWrapper>
+        </Inner>
+      </StyledHero>
+    );
+  }
+}
 
 export default Hero;

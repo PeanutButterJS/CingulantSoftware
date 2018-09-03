@@ -1,19 +1,26 @@
 import styled from 'styled-components';
 
 export const Textarea = styled.textarea`
-  border: none;
-  border-bottom: 1px solid ${props => props.theme.brown};
-  padding: 5px 8px 0;
-  resize: none;
+  padding: 0.75em 1em;
+  appearance: none;
+  background: rgba(255, 255, 255, 0.025);
+  border-radius: 5px;
+  border: solid 2px rgba(255, 255, 255, 0.125);
+  color: inherit;
+  display: block;
+  outline: 0;
+  padding: 0 1em;
+  text-decoration: none;
   width: 100%;
-  margin: 15px 0;
+  flex-direction: column;
+  resize: auto;
+  cursor: text;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: 16.5pt;
+  font-weight: 300;
+  line-height: 1.65;
   box-sizing: border-box;
-  outline: none;
-  color: ${props => props.theme.white};
-  background: transparent;
-  &::placeholder {
-    color: ${props => props.theme.brown};
-  }
 `;
 
 export default Textarea;

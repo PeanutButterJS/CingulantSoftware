@@ -3,7 +3,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import Hero from './components/hero';
 import MainContent from './components/main-content';
 // import PageContent from './components/page-content';
-//  import Footer from './components/footer';
+import Footer from './components/footer';
 import PageWrapper from './components/page-wrapper';
 import Header from './components/header';
 /* import Descriptions from './components/descriptions';
@@ -18,13 +18,14 @@ const App = () => (
     <Header />
     <Hero />
     <MainContent />
+    <Footer />
 
     {/*      <Descriptions />
     <TransparentContent />
     <Gallery />
     <Testimonials />
     <BottomContent />
-    <Footer /> */}
+     */}
   </PageWrapper>
 );
 
