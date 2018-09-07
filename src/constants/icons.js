@@ -5,35 +5,18 @@ export const icons = {
   mug: "'\\e9a2'",
   earth: "'\\e9ca'",
   rocket: "'\\e9a5'",
-  trophy: "'\\e99e'"
+  trophy: "'\\e99e'",
+  phone: "'\\e942'",
+  facebook: "'\\ea91'",
+  whatsapp: "'\\ea93'",
+  github: "'\\eab0'",
+  skype: "'\\eac5'",
+  linkedin: "'\\eac9'"
 };
-/* .icon-phone:before {
-  content: "\e942";
-}
-
-.icon-embed2:before {
+/* .icon-embed2:before {
   content: "\ea80";
 }
 
-.icon-facebook2:before {
-  content: "\ea91";
-}
-
-.icon-whatsapp:before {
-  content: "\ea93";
-}
-
-.icon-github:before {
-  content: "\eab0";
-}
-
-.icon-skype:before {
-  content: "\eac5";
-}
-
-.icon-linkedin:before {
-  content: "\eac9";
-}
 
 .icon-html-five:before {
   content: "\eae4";

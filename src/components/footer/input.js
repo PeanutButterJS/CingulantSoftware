@@ -6,7 +6,7 @@ export const Input = styled.input`
   background: rgba(255, 255, 255, 0.025);
   border-radius: 5px;
   border: solid 2px rgba(255, 255, 255, 0.125);
-  color: inherit;
+  color: ${props => props.theme.white};
   display: block;
   outline: 0;
   padding: 0 1em;
@@ -17,6 +17,10 @@ export const Input = styled.input`
   line-height: 1.65;
   cursor: text;
   box-sizing: border-box;
+
+  &:focus {
+    border-color: ${props => props.theme.blue};
+  }
 `;
 
 export default Input;

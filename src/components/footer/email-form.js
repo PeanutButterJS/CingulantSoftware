@@ -28,7 +28,6 @@ const Fields = styled.div`
     margin: -1.5em 0 2em -1.5em;
   }
 `;
-
 export const EmailForm = () => (
   <Form
     className="form"
@@ -45,9 +44,8 @@ export const EmailForm = () => (
       <Field name="message" label="Message">
         <Textarea rows="4" name="message" id="message" />
       </Field>
-
-      <Button type="submit" value="CONTACT" />
     </Fields>
+    <Button type="submit" value="CONTACT" />
   </Form>
 );
 

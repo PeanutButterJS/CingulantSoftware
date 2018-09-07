@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import Title from '../common/title';
 import Text from '../common/text';
 import EmailForm from './email-form';
+import ContactInfo from './contact-info';
 
 const StyledFooter = styled.footer``;
 const Inner = styled.div`
@@ -39,6 +40,7 @@ export const Footer = () => (
         ac elementum arcu. Quisque placerat auctor laoreet.
       </StyledText>
       <EmailForm />
+      <ContactInfo />
     </Inner>
   </StyledFooter>
 );
