@@ -3,6 +3,7 @@ import Title from '../common/title';
 import Text from '../common/text';
 import EmailForm from './email-form';
 import ContactInfo from './contact-info';
+import CopyWrite from './copywrite';
 
 const StyledFooter = styled.footer``;
 const Inner = styled.div`
@@ -41,6 +42,7 @@ export const Footer = () => (
       </StyledText>
       <EmailForm />
       <ContactInfo />
+      <CopyWrite />
     </Inner>
   </StyledFooter>
 );

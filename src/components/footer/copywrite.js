@@ -1,30 +1,46 @@
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 
-export const CopyWrite = ({ className }) => (
-  <div className={className}>
-    <span>© 2018 Cingulant Sofware · All rights reserved</span>
-    <span>Powered By PeanutButterJS</span>
-  </div>
-);
-
-CopyWrite.propTypes = {
-  className: PropTypes.string
-};
-
-export default styled(CopyWrite)`
-  padding: 20px 0;
-  display: flex;
-  font-size: 0.8rem;
-  justify-content: space-between;
-  .siteText {
-    font-family: 'Burnstowndam';
-    font-size: 3rem;
-    padding-left: 15px;
-    transition: all 0.5s ease;
-    @media (max-width: 700px) {
-      font-size: 2rem;
-      padding-left: 5px;
-    }
+const StyledCopyWrite = styled.ul`
+  border-top: solid 2px rgba(255, 255, 255, 0.125);
+  list-style: none;
+  margin: 4em 0 2em 0;
+  padding: 2em 0 0 0;
+  width: 100%;
+  @media screen and (max-width: 980px) {
+    margin: 4em 0 2em 0;
   }
 `;
+
+const Item = styled.li`
+  border-left: solid 2px rgba(255, 255, 255, 0.125);
+  color: rgba(255, 255, 255, 0.35);
+  display: inline-block;
+  font-size: 0.9em;
+  line-height: 1;
+  margin-left: 1em;
+  padding: 0;
+  padding-left: 1em;
+  &:first-child {
+    border-left: 0;
+    margin-left: 0;
+    padding-left: 0;
+    @media screen and (max-width: 480px) {
+      margin-top: 0;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    border-left: 0;
+    display: block;
+    margin: 1em 0 0 0;
+    padding-left: 0;
+  }
+`;
+
+export const CopyWrite = () => (
+  <StyledCopyWrite>
+    <Item>© 2018 Cingulant Sofware · All rights reserved</Item>
+    <Item>Powered By PeanutButterJS</Item>
+  </StyledCopyWrite>
+);
+
+export default CopyWrite;
