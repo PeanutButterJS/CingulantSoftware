@@ -25,7 +25,7 @@ const Label = styled.label`
 
 export const Field = ({ name, label, children }) => (
   <StyledField>
-    <Label for={name}>{label}</Label>
+    <Label htmlFor={name}>{label}</Label>
     {children}
   </StyledField>
 );
