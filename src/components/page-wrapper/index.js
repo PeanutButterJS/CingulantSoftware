@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import image from '../../assets/images/background.png';
+import image from '../../assets/images/skyline-district-3302126.jpg';
 
 export const PageWrapper = styled.div`
   background-color: ${props => props.theme.darkBlue};

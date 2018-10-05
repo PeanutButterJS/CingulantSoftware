@@ -113,7 +113,7 @@ export class Hero extends React.Component {
               Cingulant Software
             </TitleMainText>
             <TitleSecondText className="preload">
-              Outsource the right way - the Cingulant way!
+              Building your buisness by building your platform!
             </TitleSecondText>
           </LogoWrapper>
         </Inner>

@@ -20,13 +20,14 @@ export const MainContent = () => (
     <ImageContent
       odd
       image={image2}
-      title="Magna arcu feugiat"
+      title="Websites"
       color={theme.darkBlue}
     >
-      Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante,
-      nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus
-      arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et
-      faucibus viverra, ex nulla cursus.
+      We create awesome websites for any industry and users. The sites we create
+      can become the digital HQ for online companies, private shop of individual
+      business owners or studios for young and aspiring artists, creators and
+      users who have something to offer to the world. Count on professionals to
+      give you the best web representation possible.
     </ImageContent>
     <ImageContent
       image={image3}
