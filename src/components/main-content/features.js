@@ -48,12 +48,11 @@ const Inner = styled.div`
 export const Features = () => (
   <SlantedContent color={theme.blue}>
     <Inner>
-      <Title>This is the title for this section</Title>
+      <Title>We&apos;ve got you covered</Title>
       <Text>
-        Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis
-        ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id
-        tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices,
-        neque et faucibus viverra, ex nulla cursus.
+        Cingulat offers the full range of services to give you the piece of mind
+        you need to run your buisness. So go get yourself a cup of coffee and
+        put your feet up on the desk and we&apos;ll take care of the rest.
       </Text>
       <FeaturesWrapper>
         <Feature
