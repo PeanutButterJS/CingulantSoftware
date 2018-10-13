@@ -55,59 +55,31 @@ export const Features = () => (
         put your feet up on the desk and we&apos;ll take care of the rest.
       </Text>
       <FeaturesWrapper>
-        <Feature
-          child={1}
-          name="database"
-          icon={icons.database}
-          title="This is the title"
-        >
-          Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem
-          tincidunt nullam amet leo Aenean ligula consequat consequat.
+        <Feature child={1} name="check" icon={icons.check} title="UI/UX Design">
+          We help design a smooth user interface and expririence. Fit all screen
+          sizes and devices.
         </Feature>
         <Feature
           child={2}
-          name="users"
-          icon={icons.users}
-          title="This is the title"
+          name="check"
+          icon={icons.check}
+          title="Website Development"
         >
-          Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem
-          tincidunt nullam amet leo Aenean ligula consequat consequat.
+          Development of both backend and front end of website matching your
+          requirmenets with the latest technology.
         </Feature>
-        <Feature
-          child={3}
-          name="mug"
-          icon={icons.mug}
-          title="This is the title"
-        >
-          Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem
-          tincidunt nullam amet leo Aenean ligula consequat consequat.
+        <Feature child={3} name="check" icon={icons.check} title="Site Launch">
+          Getting your site up and running. Including automated migrations and
+          integration.
         </Feature>
-        <Feature
-          child={4}
-          name="earth"
-          icon={icons.earth}
-          title="This is the title"
-        >
-          Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem
-          tincidunt nullam amet leo Aenean ligula consequat consequat.
+        <Feature child={4} name="check" icon={icons.check} title="Testing">
+          Avoid bugs with full testing of code and functionality.
         </Feature>
-        <Feature
-          child={5}
-          name="rocket"
-          icon={icons.rocket}
-          title="This is the title"
-        >
-          Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem
-          tincidunt nullam amet leo Aenean ligula consequat consequat.
+        <Feature child={5} name="check" icon={icons.check} title="Support">
+          Mantinance, hosting, data analasis
         </Feature>
-        <Feature
-          child={6}
-          name="trophy"
-          icon={icons.trophy}
-          title="This is the title"
-        >
-          Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem
-          tincidunt nullam amet leo Aenean ligula consequat consequat.
+        <Feature child={6} name="check" icon={icons.check} title="Training">
+          On site and phone training with your team.
         </Feature>
       </FeaturesWrapper>
     </Inner>

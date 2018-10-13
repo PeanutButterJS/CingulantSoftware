@@ -11,7 +11,8 @@ export const icons = {
   whatsapp: "'\\ea93'",
   github: "'\\eab0'",
   skype: "'\\eac5'",
-  linkedin: "'\\eac9'"
+  linkedin: "'\\eac9'",
+  check: "'\\ea10'"
 };
 /* .icon-embed2:before {
   content: "\ea80";

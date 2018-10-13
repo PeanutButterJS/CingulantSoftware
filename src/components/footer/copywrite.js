@@ -40,6 +40,7 @@ export const CopyWrite = () => (
   <StyledCopyWrite>
     <Item>© 2018 Cingulant Sofware · All rights reserved</Item>
     <Item>Powered By PeanutButterJS</Item>
+    <Item>HTML5 UP</Item>
   </StyledCopyWrite>
 );
 
