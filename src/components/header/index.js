@@ -7,8 +7,7 @@ const StyledHeader = styled.header`
   position: fixed;
   top: 0;
   height: 80px;
-  background-color: ${props => props.theme.veryDarkBlue};
-  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.05);
   z-index: 2;
   display: flex;
   padding: 0.3rem 0.5rem 0;
@@ -20,7 +19,7 @@ const StyledHeader = styled.header`
   }
 
   &.showScroll {
-    opacity: 1;
+    background-color: rgba(1, 48, 63, 0.9); /* ${props => props.theme.veryDarkBlue}; */
   }
 `;
 
@@ -28,7 +27,7 @@ export const Header = () => {
   $(window).scroll(() => {
     const st = $(window).scrollTop();
 
-    if (st > document.getElementById('content').offsetTop) {
+    if (st > 20) {
       // Scroll Down
       $('header')
         .removeClass('hideScroll')

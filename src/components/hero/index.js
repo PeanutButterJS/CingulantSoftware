@@ -1,5 +1,4 @@
 import Styled from 'styled-components';
-import Logo from '../logo';
 
 const Inner = Styled.div`
   margin: 0 auto;
@@ -25,6 +24,17 @@ const LogoWrapper = Styled.div`
     opacity: 0;
   }
 
+`;
+const Slant = Styled.div`
+  width: 1600px;
+  height: 1600px;
+  background-color: rgba(125,204,200, 0.7);
+  position: absolute;
+  transform: rotate(-145deg);
+  left: -1482px;
+  top: -1000px;
+  outline: 60px solid rgba(255,255,255,0.1);
+  z-index: 3;
 `;
 
 const TitleMainText = Styled.h2`
@@ -77,6 +87,8 @@ transition: opacity 0.5s ease, transform 0.5s ease, filter 0.25s ease;
 const StyledHero = Styled.div`
  color: white;
   padding: 10em 0 4.75em 0;
+  position: relative;
+  overflow: hidden;
 
   @media screen and (max-width: 1280px) {
     padding: 7em 0 8.25em 0;
@@ -108,7 +120,7 @@ export class Hero extends React.Component {
       <StyledHero>
         <Inner>
           <LogoWrapper className="preload">
-            <Logo />
+            <Slant />
             <TitleMainText className="preload">
               Cingulant Software
             </TitleMainText>

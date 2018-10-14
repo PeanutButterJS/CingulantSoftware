@@ -12,13 +12,11 @@ export const theme = {
 };
 
 export const theme2 = {
-  blue: '#296484',
-  lightBlue: '#2e9cca',
-  veryLightBlue: '#aaabb8',
-  darkBlue: '#464866',
-  veryDarkBlue: '#25274d',
-  white: 'white',
-  grey: 'grey'
+  darkBlue: '#35404E',
+  teal: '#4EAAA5',
+  lightBlue: '#7DCCC8',
+  green: '#A4D39E',
+  red: '#E25D59'
 };
 
 export default theme;
