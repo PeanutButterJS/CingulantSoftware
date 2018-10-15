@@ -19,4 +19,12 @@ export const theme2 = {
   red: '#E25D59'
 };
 
+export const theme3 = {
+  blue: '#429FCA',
+  grey: '#A59DA1',
+  white: '#F8F9FB',
+  green: '#3CAF5E',
+  red: '#EB4338'
+};
+
 export default theme;
