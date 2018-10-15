@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import $ from 'jquery';
-import Logo from '../logo';
+import Logo from './logo';
 
 const StyledHeader = styled.header`
   width: 100%;
@@ -19,31 +19,42 @@ const StyledHeader = styled.header`
   }
 
   &.showScroll {
-    background-color: rgba(1, 48, 63, 0.9); /* ${props => props.theme.veryDarkBlue}; */
+    background-color: rgba(53, 64, 78, 0.9); 
+    /* rgba(1, 48, 63, 0.9);  ${props => props.theme.veryDarkBlue}; */
   }
 `;
 
-export const Header = () => {
-  $(window).scroll(() => {
-    const st = $(window).scrollTop();
+export class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      scrolled: false
+    };
+    $(window).scroll(() => {
+      const st = $(window).scrollTop();
 
-    if (st > 20) {
-      // Scroll Down
-      $('header')
-        .removeClass('hideScroll')
-        .addClass('showScroll');
-    } else {
-      $('header')
-        .removeClass('showScroll')
-        .addClass('hideScroll');
-    }
-  });
+      if (st > 20) {
+        // Scroll Down
+        this.setState({ scrolled: true });
+        $('header')
+          .removeClass('hideScroll')
+          .addClass('showScroll');
+      } else {
+        this.setState({ scrolled: false });
+        $('header')
+          .removeClass('showScroll')
+          .addClass('hideScroll');
+      }
+    });
+  }
 
-  return (
-    <StyledHeader>
-      <Logo />
-    </StyledHeader>
-  );
-};
+  render() {
+    return (
+      <StyledHeader>
+        <Logo dark={!this.state.scrolled} />
+      </StyledHeader>
+    );
+  }
+}
 
 export default Header;

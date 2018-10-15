@@ -16,14 +16,13 @@ export default Styled(Logo)`
   .c {
     font-family: 'SegoeScript';
     font-size: 3.5rem;
-    color: ${props => props.theme.blue}; // blue
-    transition: all 0.5s ease;
-
+    color: ${props => (props.dark ? '#35404E' : '#429FCA')} ;
     @media (max-width: 736px) {
       font-size: 2.2rem;
       padding-left: 5px;
     }
   }
+  
 
   .rest {
     font-family: 'OpenSans';

@@ -20,11 +20,13 @@ export const theme2 = {
 };
 
 export const theme3 = {
+  darkBlue: '#35404E',
   blue: '#429FCA',
   grey: '#A59DA1',
   white: '#F8F9FB',
   green: '#3CAF5E',
-  red: '#EB4338'
+  red: '#EB4338',
+  yellow: '#FBDE37'
 };
 
 export default theme;
