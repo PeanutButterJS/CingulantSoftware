@@ -14,9 +14,13 @@ const LogoWrapper = Styled.div`
   transform: translateY(0);
   opacity: 1; 
   margin: 0 0 1.3em 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
 
   @media screen and (max-width: 736px) {
     margin: 0 0 1em 0;
+    flex-direction: column;
   }
 
   &.preload {
@@ -33,7 +37,17 @@ const Slant = Styled.div`
   transform: rotate(-145deg);
   left: -1482px;
   top: -1000px;
-  outline: 60px solid rgba(255,255,255,0.1);
+  z-index: 3;
+`;
+
+const Slant2 = Styled.div`
+  width: 200px;
+  height: 1700px;
+  background-color: rgba(235, 67, 56, .7);
+  position: absolute;
+  transform: rotate(-35deg);
+  left: 50px;
+  top: -1000px;
   z-index: 3;
 `;
 
@@ -43,16 +57,21 @@ const TitleMainText = Styled.h2`
     transition-delay: 0.65s;
     filter: blur(0);
     opacity: 1;
-    border-bottom: solid 2px rgba(255, 255, 255, 0.125);
-    font-size: 2.25em;
+    font-size: 1.7em;
     margin-bottom: 0.6em;
     padding-bottom: 0.4em;
     letter-spacing: 0.1em;
     text-transform: uppercase;   
+    width: 40%;
+    line-height: 1.6;
+    z-index: 4;
 
     @media screen and (max-width: 736px) {
       font-size: 1.5em;
+      width: 100%;
+      text-align: center;
     }
+   
 
   &.preload {
     opacity: 0;
@@ -61,7 +80,7 @@ const TitleMainText = Styled.h2`
   }
 `;
 
-const TitleSecondText = Styled.p`
+const TitleSecondText = Styled.h3`
 transition: opacity 0.5s ease, transform 0.5s ease, filter 0.25s ease;
     transform: translateX(0);
     transition-delay: 0.8s;
@@ -69,12 +88,16 @@ transition: opacity 0.5s ease, transform 0.5s ease, filter 0.25s ease;
     opacity: 1;
     font-size: 1em;
     letter-spacing: 0.1em;
-    line-height: 2;
+    line-height: 1.6;
+    width: 40%;
+    z-index: 4;
     text-transform: uppercase; 
     font-family: 'OpenSansLight'; 
 
     @media screen and (max-width: 736px){
     font-size: 0.8em;
+    width: 100%;
+    text-align: center;
     }
 
   &.preload {
@@ -121,8 +144,9 @@ export class Hero extends React.Component {
         <Inner>
           <LogoWrapper className="preload">
             <Slant />
+            <Slant2 />
             <TitleMainText className="preload">
-              Cingulant Software
+              Get a personalized web development team
             </TitleMainText>
             <TitleSecondText className="preload">
               Building your buisness by building your platform!

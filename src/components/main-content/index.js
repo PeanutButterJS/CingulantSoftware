@@ -1,10 +1,11 @@
 import styled from 'styled-components';
-import image2 from '../../assets/images/image2.jpg';
+import LinkSection from './link-section';
+/* import image2 from '../../assets/images/image2.jpg';
 import image3 from '../../assets/images/image3.jpg';
 import image4 from '../../assets/images/image4.jpg';
 import theme from '../../constants/theme';
 import Features from './features';
-import ImageContent from './image-content';
+import ImageContent from './image-content'; */
 
 const StyledContent = styled.section`
   margin: 0;
@@ -17,7 +18,8 @@ const StyledContent = styled.section`
 
 export const MainContent = () => (
   <StyledContent id="content">
-    <ImageContent
+    <LinkSection />
+    {/* <ImageContent
       odd
       image={image2}
       title="Our Websites"
@@ -55,7 +57,7 @@ export const MainContent = () => (
     <ImageContent odd image={image4} title="Our Mission" color={theme.darkBlue}>
       Keep It Simple!!
     </ImageContent>
-    <Features />
+    <Features /> */}
   </StyledContent>
 );
 
