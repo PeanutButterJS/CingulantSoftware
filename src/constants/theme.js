@@ -1,4 +1,4 @@
-export const theme = {
+export const theme4 = {
   blue: '#2e9cca', // '#02a9f7'
   lightBlue: '#89d6fb',
   veryLightBlue: '#d4f0fc',
@@ -19,7 +19,7 @@ export const theme2 = {
   red: '#E25D59'
 };
 
-export const theme3 = {
+export const theme = {
   darkBlue: '#35404E',
   blue: '#429FCA',
   grey: '#A59DA1',
