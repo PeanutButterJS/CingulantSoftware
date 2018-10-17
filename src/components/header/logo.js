@@ -16,6 +16,7 @@ export default Styled(Logo)`
   .c {
     font-family: 'SegoeScript';
     font-size: 3.5rem;
+    transition: all 0.2s ease-in-out;
     color: ${props => (props.dark ? '#35404E' : '#429FCA')} ;
     @media (max-width: 736px) {
       font-size: 2.2rem;

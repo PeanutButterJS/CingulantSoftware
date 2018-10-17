@@ -13,7 +13,7 @@ const StyledHeader = styled.header`
   padding: 0.3rem 0.5rem 0;
   align-items: center;
   justify-content: space-between;
-  transition: opacity 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   @media (max-width: 700px) {
     height: 40px;
   }

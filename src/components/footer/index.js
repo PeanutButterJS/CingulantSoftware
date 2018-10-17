@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import ScrollableAnchor from 'react-scrollable-anchor';
 import Title from '../common/title';
 import Text from '../common/text';
 import EmailForm from './email-form';
@@ -31,20 +32,22 @@ const StyledTitle = styled(Title)`
 `;
 
 export const Footer = () => (
-  <StyledFooter>
-    <Inner>
-      <StyledTitle>Contact Us</StyledTitle>
-      <StyledText>
-        Cras mattis ante fermentum, malesuada neque vitae, eleifend erat.
-        Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas,
-        purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed
-        ac elementum arcu. Quisque placerat auctor laoreet.
-      </StyledText>
-      <EmailForm />
-      <ContactInfo />
-      <CopyWrite />
-    </Inner>
-  </StyledFooter>
+  <ScrollableAnchor id="contact">
+    <StyledFooter>
+      <Inner>
+        <StyledTitle>Contact Us</StyledTitle>
+        <StyledText>
+          Cras mattis ante fermentum, malesuada neque vitae, eleifend erat.
+          Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis
+          egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in
+          tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.
+        </StyledText>
+        <EmailForm />
+        <ContactInfo />
+        <CopyWrite />
+      </Inner>
+    </StyledFooter>
+  </ScrollableAnchor>
 );
 
 export default Footer;
