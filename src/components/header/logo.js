@@ -17,7 +17,7 @@ export default Styled(Logo)`
     font-family: 'SegoeScript';
     font-size: 3.5rem;
     transition: all 0.2s ease-in-out;
-    color: ${props => (props.dark ? '#35404E' : '#429FCA')} ;
+    color: ${props => (props.dark ? props.theme.darkBlue : props.theme.blue)} ;
     @media (max-width: 736px) {
       font-size: 2.2rem;
       padding-left: 5px;

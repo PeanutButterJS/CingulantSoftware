@@ -32,7 +32,7 @@ const LogoWrapper = Styled.div`
 const Slant = Styled.div`
   width: 1600px;
   height: 1600px;
-  background-color: rgba(60,175,94, 0.7);
+  background-color: rgba(0, 205, 205,.7);
   position: absolute;
   transform: rotate(-145deg);
   left: -1482px;
@@ -43,7 +43,7 @@ const Slant = Styled.div`
 const Slant2 = Styled.div`
   width: 200px;
   height: 1700px;
-  background-color: rgba(235, 67, 56, .7);
+  background-color: rgba(255, 165, 0, .8);;
   position: absolute;
   transform: rotate(-35deg);
   left: 50px;

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import LinkSection from './link-section';
+import OurServices from './our-services';
 /* import image2 from '../../assets/images/image2.jpg';
 import image3 from '../../assets/images/image3.jpg';
 import image4 from '../../assets/images/image4.jpg';
@@ -19,6 +20,7 @@ const StyledContent = styled.section`
 export const MainContent = () => (
   <StyledContent id="content">
     <LinkSection />
+    <OurServices />
     {/* <ImageContent
       odd
       image={image2}
