@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { lighten } from 'polished';
+import { icons } from '../../../constants/icons';
 import Title from '../../common/title';
 import Box from './box';
 
@@ -29,10 +30,10 @@ export const OurServices = () => (
   <StyledContent id="linkContent">
     <Title>Our Services</Title>
     <BoxContainer>
-      <Box>Design</Box>
-      <Box>Development</Box>
-      <Box>Maintenance</Box>
-      <Box>Training</Box>
+      <Box icon={icons.design} title="Design" />
+      <Box icon={icons.development} title="Development" />
+      <Box icon={icons.maintenance} title="Maintenance" />
+      <Box icon={icons.training} title="Training" />
     </BoxContainer>
   </StyledContent>
 );

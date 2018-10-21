@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import Icon from '../../common/icon';
 
 const StyledBox = styled.div`
   color: ${props => props.theme.darkBlue};
@@ -7,6 +8,7 @@ const StyledBox = styled.div`
   background-color: ${props => props.theme.white};
   height: 200px;
   padding: 5px;
+  position: relative;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   text-transform: uppercase;
@@ -19,11 +21,27 @@ const StyledBox = styled.div`
     width: 175px;
   }
 `;
+const BoxIcon = styled(Icon)`
+  :before {
+    font-size: 1.5em;
+    display: block;
+    color: ${props => props.theme.teal};
+    position: absolute;
+    left: 1.75em;
+    top: 2.75em;
+  }
+`;
 
-export const Box = ({ children }) => <StyledBox>{children}</StyledBox>;
+export const Box = ({ title, icon }) => (
+  <StyledBox>
+    <BoxIcon icon={icon} />
+    <span>{title}</span>
+  </StyledBox>
+);
 
 Box.propTypes = {
-  children: PropTypes.node
+  title: PropTypes.string,
+  icon: PropTypes.string
 };
 
 export default Box;
