@@ -12,7 +12,11 @@ export const icons = {
   github: "'\\eab0'",
   skype: "'\\eac5'",
   linkedin: "'\\eac9'",
-  check: "'\\ea10'"
+  check: "'\\ea10'",
+  development: "'\\e903'",
+  design: "'\\e902'",
+  maintenance: "'\\e901'",
+  training: "'\\e900'"
 };
 /* .icon-embed2:before {
   content: "\ea80";

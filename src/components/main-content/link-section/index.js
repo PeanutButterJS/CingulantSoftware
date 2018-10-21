@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { lighten } from 'polished';
+import Title from '../../common/title';
 
 const StyledContent = styled.section`
   background-color: ${props => lighten(0.3, props.theme.grey)};
@@ -20,12 +21,10 @@ const StyledContent = styled.section`
   }
 `;
 
-const Title = styled.h3`
-  padding-bottom: 10px;
+const BlueTitle = styled(Title)`
   color: ${props => props.theme.darkBlue};
-  text-transform: uppercase;
-  font-weight: normal;
 `;
+
 const Title2 = styled.h4`
   padding-bottom: 30px;
   color: ${props => props.theme.darkBlue};
@@ -52,7 +51,7 @@ const Link = styled.a`
 
 export const LinkSection = () => (
   <StyledContent id="linkContent">
-    <Title>Got an idea for a project?</Title>
+    <BlueTitle>Got an idea for a project?</BlueTitle>
     <Title2>Tell us about it</Title2>
     <Link href="#contact">CONTACT NOW</Link>
   </StyledContent>

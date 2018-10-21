@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { lighten } from 'polished';
+import Title from '../../common/title';
+import Box from './box';
 
 const StyledContent = styled.section`
   background: ${props =>
@@ -12,24 +14,27 @@ const StyledContent = styled.section`
   position: relative;
 `;
 
-const Title = styled.h3`
-  padding-bottom: 10px;
-  color: ${props => props.theme.white};
-  text-transform: uppercase;
-  font-weight: normal;
-`;
-const Title2 = styled.h4`
-  padding-bottom: 30px;
-  color: ${props => props.theme.white};
-  text-transform: uppercase;
-  font-weight: normal;
+const BoxContainer = styled.div`
+  padding: 30px 5px;
+  display: flex;
+  justify-content: space-around;
+
+  @media screen and (max-width: 980px) {
+    align-items: center;
+    flex-direction: column;
+  }
 `;
 
 export const OurServices = () => (
   <StyledContent id="linkContent">
-    <Title>Got an idea for a project?</Title>
-    <Title2>Tell us about it</Title2>
+    <Title>Our Services</Title>
+    <BoxContainer>
+      <Box>Design</Box>
+      <Box>Development</Box>
+      <Box>Maintenance</Box>
+      <Box>Training</Box>
+    </BoxContainer>
   </StyledContent>
 );
 
-export default styled(OurServices)``;
+export default OurServices;
