@@ -8,20 +8,48 @@ const StyledBox = styled.div`
   background-color: ${props => props.theme.white};
   height: 60px;
   padding: 5px;
+  border-radius: 5px;
   position: relative;
   box-sizing: content-box;
   text-transform: uppercase;
   cursor: pointer;
-  border: ${props => (props.chosen ? `2px solid ${props.theme.teal}` : 'none')};
   border-bottom: ${props => `4px solid ${props.theme.teal}`};
   :hover {
     box-shadow: 1px 1px 1px 0px rgba(250, 250, 250, 0.9);
+  }
+  :after {
+    border-top: ${props => `25px solid ${props.theme.teal}`};
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    bottom: -27px;
+    content: ${props => (props.chosen ? '""' : 'initial')};
+    position: absolute;
+    left: 45%;
+    margin-left: -17px;
+    width: 0;
+    height: 0;
+
+    @media screen and (max-width: 980px) and (min-width: 736px) {
+      border-top: ${props => `20px solid ${props.theme.teal}`};
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      bottom: -30px;
+      transform: rotate(-90deg);
+      right: -33px;
+      top: 19px;
+      left: initial;
+    }
   }
   @media screen and (max-width: 1680px) {
     height: 50px;
   }
   @media screen and (max-width: 980px) {
     margin-bottom: 15px;
+    width: 130px;
+  }
+  @media screen and (max-width: 980px) and (min-width: 736px) {
+    border-right: ${props => `4px solid ${props.theme.teal}`};
+    border-bottom: none;
   }
   @media screen and (max-width: 736px) {
     width: 100%;
@@ -34,7 +62,7 @@ const BoxIcon = styled(Icon)`
     color: ${props => props.theme.teal};
     position: absolute;
     left: 10px;
-    top: 30px;
+    top: 10px;
     @media screen and (max-width: 1680px) {
       top: 25px;
     }
@@ -42,20 +70,20 @@ const BoxIcon = styled(Icon)`
 `;
 
 const Title = styled.h5`
-  font-size: 0.7em;
-  text-align: left;
-`;
+  font-size: 0.6em;
+  text-align: center;
+  position: relative;
+  top: 6px;
 
-const Inner = styled.div`
-  margin-left: 35px;
+  @media screen and (max-width: 980px) {
+    font-size: 0.65em;
+  }
 `;
 
 export const Box = ({ title, icon, onClick, chosen }) => (
   <StyledBox onClick={() => onClick()} chosen={chosen}>
-    <Inner>
-      <BoxIcon icon={icon} />
-      <Title>{title}</Title>
-    </Inner>
+    <BoxIcon icon={icon} />
+    <Title>{title}</Title>
   </StyledBox>
 );
 

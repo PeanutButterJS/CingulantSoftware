@@ -34,14 +34,6 @@ const BoxContainer = styled.div`
   }
 `;
 
-const Content = styled.p`
-  color: ${props => props.theme.white};
-  width: 60%;
-  margin: auto;
-  text-align: left;
-  line-height: 1.4em;
-`;
-
 const BoxTextContainer = styled.div`
   flex-direction: column;
   display: flex;
@@ -86,11 +78,6 @@ export class OurServices extends React.Component {
       <ScrollableAnchor id="OurServices">
         <StyledContent>
           <Title>Our Services</Title>
-          <Content>
-            Cingulant will provide a personalized team fit to take your company
-            from the begining of the planning stages through the entire lifetime
-            of your site.
-          </Content>
           <BoxTextContainer>
             <BoxContainer>
               <Box
@@ -120,7 +107,7 @@ export class OurServices extends React.Component {
             </BoxContainer>
             <Text text={texts[this.state.chosenBox]} />
           </BoxTextContainer>
-          <Link href="#contact">CONTACT NOW</Link>
+          <Link href="#contact">GET STARTED</Link>
         </StyledContent>
       </ScrollableAnchor>
     );
