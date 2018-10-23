@@ -25,12 +25,10 @@ const BoxContainer = styled.div`
   margin: auto;
   justify-content: space-between;
 
-  @media screen and (max-width: 980px) {
-    align-items: center;
-    flex-direction: column;
-  }
   @media screen and (max-width: 980px) and (min-width: 736px) {
     width: 30%;
+    align-items: center;
+    flex-direction: column;
   }
 `;
 
@@ -105,7 +103,10 @@ export class OurServices extends React.Component {
                 title="Training"
               />
             </BoxContainer>
-            <Text text={texts[this.state.chosenBox]} />
+            <Text
+              title={this.state.chosenBox}
+              text={texts[this.state.chosenBox]}
+            />
           </BoxTextContainer>
           <Link href="#contact">GET STARTED</Link>
         </StyledContent>

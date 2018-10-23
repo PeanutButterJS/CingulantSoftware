@@ -11,6 +11,10 @@ const TextContainer = styled.div`
   color: ${props => props.theme.white};
   height: auto;
   border-left: ${props => `4px solid ${props.theme.teal}`};
+
+  @media screen and (max-width: 736px) {
+    margin-top: 5px;
+  }
 `;
 
 const Paragraph = styled.div`
@@ -22,17 +26,30 @@ const Paragraph = styled.div`
   }
 `;
 
-export const Text = ({ text }) => {
+const Title = styled.div`
+  color: ${props => props.theme.white};
+  opacity: 0.4;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 1.5em;
+  text-transform: uppercase;
+`;
+
+export const Text = ({ text, title }) => {
   if (text && text.length > 0) {
     return (
-      <TextContainer>{text.map(t => <Paragraph>{t}</Paragraph>)}</TextContainer>
+      <TextContainer>
+        <Title>{title}</Title>
+        {text.map(t => <Paragraph>{t}</Paragraph>)}
+      </TextContainer>
     );
   }
   return null;
 };
 
 Text.propTypes = {
-  text: PropTypes.arrayOf(PropTypes.string)
+  text: PropTypes.arrayOf(PropTypes.string),
+  title: PropTypes.string
 };
 
 export default Text;

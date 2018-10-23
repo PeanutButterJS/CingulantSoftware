@@ -39,6 +39,14 @@ const StyledBox = styled.div`
       top: 19px;
       left: initial;
     }
+
+    @media screen and (max-width: 736px) {
+      border-top: ${props => `10px solid ${props.theme.teal}`};
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      bottom: -13px;
+      left: 60%;
+    }
   }
   @media screen and (max-width: 1680px) {
     height: 50px;
@@ -52,9 +60,10 @@ const StyledBox = styled.div`
     border-bottom: none;
   }
   @media screen and (max-width: 736px) {
-    width: 100%;
+    width: 50px;
   }
 `;
+
 const BoxIcon = styled(Icon)`
   :before {
     font-size: 1em;
@@ -65,6 +74,9 @@ const BoxIcon = styled(Icon)`
     top: 10px;
     @media screen and (max-width: 1680px) {
       top: 25px;
+    }
+    @media screen and (max-width: 736px) {
+      left: 21px;
     }
   }
 `;
@@ -78,11 +90,14 @@ const Title = styled.h5`
   @media screen and (max-width: 980px) {
     font-size: 0.65em;
   }
+  @media screen and (max-width: 736px) {
+    display: none;
+  }
 `;
 
 export const Box = ({ title, icon, onClick, chosen }) => (
   <StyledBox onClick={() => onClick()} chosen={chosen}>
-    <BoxIcon icon={icon} />
+    <BoxIcon title={title} icon={icon} />
     <Title>{title}</Title>
   </StyledBox>
 );
