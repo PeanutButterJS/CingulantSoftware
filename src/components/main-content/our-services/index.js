@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { lighten } from 'polished';
+import Fade from 'react-reveal/Fade';
 import ScrollableAnchor from 'react-scrollable-anchor';
 import { icons } from '../../../constants/icons';
 import { texts } from '../../../constants/service-texts';
@@ -77,36 +78,39 @@ export class OurServices extends React.Component {
         <StyledContent>
           <Title>Our Services</Title>
           <BoxTextContainer>
-            <BoxContainer>
-              <Box
-                onClick={() => this.chooseBox('design')}
-                chosen={this.state.chosenBox === 'design'}
-                icon={icons.design}
-                title="Design"
+            <Fade>
+              <BoxContainer>
+                <Box
+                  onClick={() => this.chooseBox('design')}
+                  chosen={this.state.chosenBox === 'design'}
+                  icon={icons.design}
+                  title="Design"
+                />
+                <Box
+                  onClick={() => this.chooseBox('development')}
+                  chosen={this.state.chosenBox === 'development'}
+                  icon={icons.development}
+                  title="Development"
+                />
+                <Box
+                  onClick={() => this.chooseBox('maintenance')}
+                  chosen={this.state.chosenBox === 'maintenance'}
+                  icon={icons.maintenance}
+                  title="Maintenance"
+                />
+                <Box
+                  onClick={() => this.chooseBox('training')}
+                  chosen={this.state.chosenBox === 'training'}
+                  icon={icons.training}
+                  title="Training"
+                />
+              </BoxContainer>
+
+              <Text
+                title={this.state.chosenBox}
+                text={texts[this.state.chosenBox]}
               />
-              <Box
-                onClick={() => this.chooseBox('development')}
-                chosen={this.state.chosenBox === 'development'}
-                icon={icons.development}
-                title="Development"
-              />
-              <Box
-                onClick={() => this.chooseBox('maintenance')}
-                chosen={this.state.chosenBox === 'maintenance'}
-                icon={icons.maintenance}
-                title="Maintenance"
-              />
-              <Box
-                onClick={() => this.chooseBox('training')}
-                chosen={this.state.chosenBox === 'training'}
-                icon={icons.training}
-                title="Training"
-              />
-            </BoxContainer>
-            <Text
-              title={this.state.chosenBox}
-              text={texts[this.state.chosenBox]}
-            />
+            </Fade>
           </BoxTextContainer>
           <Link href="#contact">GET STARTED</Link>
         </StyledContent>

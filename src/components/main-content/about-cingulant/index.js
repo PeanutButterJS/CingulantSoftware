@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import ScrollableAnchor from 'react-scrollable-anchor';
+import { lighten } from 'polished';
+import Slide from 'react-reveal/Slide';
 import Title from '../../common/title';
 
 const StyledContent = styled.section`
@@ -25,40 +27,70 @@ const StyledTitle = styled(Title)`
   color: ${props => props.theme.darkBlue};
 `;
 
+const Special = styled.span`
+  font-weight: bold;
+  color: ${props => props.theme.teal};
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+`;
+
+const Link = styled.a`
+  color: ${props => props.theme.darkBlue};
+  padding: 20px 40px;
+  font-size: 0.8em;
+  z-index: 1;
+  display: inline-block;
+  position: relative;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 30px;
+  border-radius: 9px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  background: ${props =>
+    `linear-gradient(${lighten(0.15, props.theme.orange)}, ${
+      props.theme.orange
+    })`};
+`;
+
 export const AboutCingulant = () => (
   <ScrollableAnchor id="AboutCingulant">
     <StyledContent>
-      <StyledTitle>What is Cingulant?</StyledTitle>
-      <Paragraph>
-        <TextLine>Cingulant is high tech. It&apos;s Cutting edge.</TextLine>
-        <TextLine>Cingulant denotes expertise and experience.</TextLine>
-        <TextLine>
-          Cingulant signifies technology within budget. It&apos;s simplicity
-          with a smart dose of complexity.
-        </TextLine>
-      </Paragraph>
-      <Paragraph>
-        <TextLine>
-          Cingulant means team work. But it also implies Singularity. It&apos;s
-          a team of highly qualified developers but with a Singular Point Of
-          Contact.
-        </TextLine>
-        <TextLine>
-          We represent experience. We believe in service. We work hard to earn
-          your trust.
-        </TextLine>
-      </Paragraph>
-      <Paragraph>
-        <TextLine>
-          Cingulant worries about technology, so you can worry about your
-          business. It&apos;s project management done right.
-        </TextLine>
-        <TextLine>Cingulant means time tested scale-able solutions.</TextLine>
-      </Paragraph>
-      <Paragraph>
-        <TextLine>Cingulant is a way. It&apos;s an experience.</TextLine>
-        <TextLine>And we look forward to introducing ourselves.</TextLine>
-      </Paragraph>
+      <Slide left>
+        <StyledTitle>What is Cingulant?</StyledTitle>
+        <Paragraph>
+          <TextLine>
+            Cingulant is high tech. It&apos;s <Special>Cutting edge</Special>.
+          </TextLine>
+          <TextLine>Cingulant denotes expertise and experience.</TextLine>
+          <TextLine>
+            Cingulant signifies <Special>technology within budget</Special>.
+            It&apos;s simplicity with a smart dose of complexity.
+          </TextLine>
+        </Paragraph>
+        <Paragraph>
+          <TextLine>
+            Cingulant means team work. But it also implies Singularity.
+            It&apos;s a team of highly qualified developers but with a Singular
+            Point Of Contact.
+          </TextLine>
+          <TextLine>
+            We represent <Special>experience</Special>. We believe in service.
+            We work hard to earn your trust.
+          </TextLine>
+        </Paragraph>
+        <Paragraph>
+          <TextLine>
+            Cingulant worries about technology, so you can worry about your
+            business. It&apos;s project management done right.
+          </TextLine>
+          <TextLine>Cingulant means time tested scale-able solutions.</TextLine>
+        </Paragraph>
+        <Paragraph>
+          <TextLine>Cingulant is a way. It&apos;s an experience.</TextLine>
+          <TextLine>And we look forward to introducing ourselves.</TextLine>
+        </Paragraph>
+      </Slide>
+      <Link href="#contact">SAY HELLO</Link>
     </StyledContent>
   </ScrollableAnchor>
 );
