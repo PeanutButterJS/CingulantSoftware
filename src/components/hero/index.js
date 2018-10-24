@@ -146,7 +146,7 @@ export class Hero extends React.Component {
             <Slant />
             <Slant2 />
             <TitleMainText className="preload">
-              Get a personalized web development team
+              Get a personalized development team
             </TitleMainText>
             <TitleSecondText className="preload">
               Building your buisness by building your platform!

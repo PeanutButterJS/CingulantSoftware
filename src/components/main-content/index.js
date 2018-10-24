@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import LinkSection from './link-section';
 import OurServices from './our-services';
+import AboutCingulant from './about-cingulant';
 /* import image2 from '../../assets/images/image2.jpg';
 import image3 from '../../assets/images/image3.jpg';
 import image4 from '../../assets/images/image4.jpg';
@@ -21,6 +22,7 @@ export const MainContent = () => (
   <StyledContent id="content">
     <LinkSection />
     <OurServices />
+    <AboutCingulant />
     {/* <ImageContent
       odd
       image={image2}

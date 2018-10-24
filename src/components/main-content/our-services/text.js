@@ -21,6 +21,7 @@ const Paragraph = styled.div`
   text-indent: 50px;
   margin-bottom: 10px;
   margin-left: 30px;
+  line-height: 1.9em;
   @media screen and (max-width: 980px) {
     text-indent: 25px;
   }
@@ -31,7 +32,7 @@ const Title = styled.div`
   opacity: 0.4;
   margin-bottom: 15px;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1em;
   text-transform: uppercase;
 `;
 
