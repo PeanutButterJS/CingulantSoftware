@@ -50,8 +50,17 @@ import Title from '../../common/title';
 const Container = styled.div`
   position: relative;
   overflow: hidden;
-  width: 30%;
+  width: 26%;
   height: 30vh;
+  margin: 15px;
+  @media (max-width: 982px) {
+    width: 18%;
+    margin: 2px;
+  }
+  @media (max-width: 736px) {
+    width: 15%;
+    margin: 2px;
+  }
 `;
 const CarouselUI = ({ children }) => <Container>{children}</Container>;
 
