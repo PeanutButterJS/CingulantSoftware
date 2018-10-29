@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import $ from 'jquery';
 import Logo from './logo';
+import ContactLink from '../common/contact-link';
 
 const StyledHeader = styled.header`
   width: 100%;
@@ -52,6 +53,7 @@ export class Header extends React.Component {
     return (
       <StyledHeader>
         <Logo dark={!this.state.scrolled} />
+        <ContactLink isHeader>CONTACT US</ContactLink>
       </StyledHeader>
     );
   }

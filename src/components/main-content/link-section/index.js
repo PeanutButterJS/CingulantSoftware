@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { lighten } from 'polished';
 import Title from '../../common/title';
+import ContactLink from '../../common/contact-link';
 
 const StyledContent = styled.section`
   background-color: ${props => lighten(0.3, props.theme.grey)};
@@ -32,28 +33,11 @@ const Title2 = styled.h4`
   font-weight: normal;
 `;
 
-const Link = styled.a`
-  color: ${props => props.theme.darkBlue};
-  padding: 20px 40px;
-  font-size: 0.8em;
-  z-index: 1;
-  display: inline-block;
-  position: relative;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 9px;
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
-  background: ${props =>
-    `linear-gradient(${lighten(0.15, props.theme.orange)}, ${
-      props.theme.orange
-    })`};
-`;
-
 export const LinkSection = () => (
   <StyledContent id="linkContent">
     <BlueTitle>Got an idea for a project?</BlueTitle>
     <Title2>Tell us about it</Title2>
-    <Link href="#contact">CONTACT NOW</Link>
+    <ContactLink>CONTACT NOW</ContactLink>
   </StyledContent>
 );
 

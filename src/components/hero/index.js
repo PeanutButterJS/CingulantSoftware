@@ -49,6 +49,9 @@ const Slant2 = Styled.div`
   left: 50px;
   top: -1000px;
   z-index: 3;
+  @media screen and (max-width: 736px) {
+    width: 40px;
+  }
 `;
 
 const TitleMainText = Styled.h2`

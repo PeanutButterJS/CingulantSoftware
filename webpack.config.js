@@ -49,9 +49,13 @@ module.exports = {
       },
 
       {
-        test: /\.(jpe?g|webm|mp4|png|gif|svg)(\?.*)?$/i,
+        test: /\.(jpe?g|webm|mp4|png|gif)(\?.*)?$/i,
         loader:
           'url-loader?limit=5120&name=[path][name].[hash].[ext]!img-loader'
+      },
+      {
+        test: /\.svg$/,
+        loader: 'raw-loader'
       }
     ]
   },
